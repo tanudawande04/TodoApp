@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import './Todo.css';
+import { MdDeleteForever } from "react-icons/md";
+import { FcApproval } from "react-icons/fc";
+
 export const Todo = () => {
     const [inputValue, setInputValue] = useState("");
     const [task, setTask] = useState([]);
@@ -40,6 +43,12 @@ export const Todo = () => {
         return () => clearInterval(interval);
 
     }, []);
+
+    const handleDltBtn = (value) => {
+        const updatedTask = task.filter((curr) => curr !== value);
+        setTask(updatedTask);
+
+    }
     return (
         <section className='todo-container'>
             <header>
@@ -68,8 +77,11 @@ export const Todo = () => {
                         return (
                             <li key={idx}>
                                 <span>{curr}</span>
-                                <button>
-                                    <mdcheck />
+                                <button className='add-btn'>
+                                    <FcApproval />
+                                </button>
+                                <button className='dlt-btn' onClick={() => handleDltBtn(curr)}>
+                                    <MdDeleteForever />
                                 </button>
                             </li>
                         )
@@ -78,6 +90,6 @@ export const Todo = () => {
                 </ul>
             </section>
 
-        </section>
+        </section >
     );
 }

@@ -1,12 +1,13 @@
-/* Container */
+/* Page ko full screen center karna */
+
+/* Main Container */
 .todo-container {
+    width: 100%;
     max-width: 500px;
-    margin: 40px auto;
     padding: 20px;
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
 }
 
 /* Header */
@@ -27,7 +28,7 @@
     margin-top: 5px;
 }
 
-/* Form Section */
+/* Form */
 .form {
     display: flex;
     justify-content: center;
@@ -79,11 +80,11 @@
 .unorderMap li {
     background: #f8f9fa;
     margin-bottom: 8px;
-    padding: 10px;
+    padding: 10px 14px;
     border-radius: 6px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 8px;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -94,20 +95,42 @@
 .unorderMap span {
     font-size: 16px;
     color: #333;
+    flex: 1;
+    /* Text ko poora jagah dena */
 }
 
-/* Task Button */
-.unorderMap button {
-    background: #28a745;
-    color: white;
+/* Approve Button */
+.add-btn {
+    background: #e0f7e9;
     border: none;
-    padding: 6px 10px;
-    border-radius: 4px;
+    padding: 6px;
+    border-radius: 50%;
     cursor: pointer;
-    font-size: 14px;
-    transition: background 0.3s ease-in-out;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
 }
 
-.unorderMap button:hover {
-    background: #218838;
+.add-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Delete Button */
+.dlt-btn {
+    background: #f5c5c5;
+    border: none;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.dlt-btn:hover {
+    transform: scale(1.1);
 }
