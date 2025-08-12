@@ -134,3 +134,23 @@
 .dlt-btn:hover {
     transform: scale(1.1);
 }
+
+.clear-all {
+    background: #ea6c6c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* Center horizontally */
+    transition: background 0.3s ease-in-out;
+}
+
+.clear-all:hover {
+    background: #ef3c3c;
+}
