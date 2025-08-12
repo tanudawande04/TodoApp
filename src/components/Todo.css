@@ -1,0 +1,113 @@
+/* Container */
+.todo-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.todo-container header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.todo-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.DateTime {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Form Section */
+.form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form form {
+    display: flex;
+    gap: 10px;
+}
+
+.todo-input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    width: 250px;
+    transition: all 0.3s ease-in-out;
+}
+
+.todo-input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+.todo-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.todo-btn:hover {
+    background: #45a049;
+}
+
+/* Task List */
+.unorderMap {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.unorderMap li {
+    background: #f8f9fa;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.unorderMap li:hover {
+    transform: translateX(4px);
+}
+
+.unorderMap span {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Task Button */
+.unorderMap button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+.unorderMap button:hover {
+    background: #218838;
+}

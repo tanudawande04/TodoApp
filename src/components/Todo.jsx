@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Todo.css';
 export const Todo = () => {
     const [inputValue, setInputValue] = useState("");
     const [task, setTask] = useState([]);
+    const [dateTime, setDateTime] = useState("");
 
     const handleValue = (value) => {
         setInputValue(value);
@@ -24,10 +25,28 @@ export const Todo = () => {
 
         setInputValue("");
     }
+
+    //Dte and Time
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+
+            const now = new Date();
+            const formet = now.toLocaleDateString();
+            const formatTime = now.toLocaleTimeString();
+            setDateTime(`${formet} - ${formatTime}`);
+
+        }, 1000);
+        return () => clearInterval(interval);
+
+    }, []);
     return (
         <section className='todo-container'>
             <header>
                 <h1>ToDoApp</h1>
+                <h2 className='DateTime'>
+                    {dateTime}
+                </h2>
             </header>
             <section className='form'>
                 <form onSubmit={handleFormSubmit}>
@@ -43,6 +62,21 @@ export const Todo = () => {
 
             </section>
 
+            <section>
+                <ul className='unorderMap'>
+                    {task.map((curr, idx) => {
+                        return (
+                            <li key={idx}>
+                                <span>{curr}</span>
+                                <button>
+                                    <mdcheck />
+                                </button>
+                            </li>
+                        )
+
+                    })}
+                </ul>
+            </section>
 
         </section>
     );
